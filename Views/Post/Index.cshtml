@@ -1,0 +1,41 @@
+﻿@model MyBlog.Post
+@{
+    var url = Url.RouteUrl("Post", new { slug = Model.Slug },"http");
+    //url = Html.UrlEncoder.Encode(url);
+}
+<div class="container-wrapper">
+    <div class="container body-content">
+        <article class="blogpost">
+            <header>
+                <ul class="sharing">
+                    <li><a href="https://twitter.com/share?url=@url&amp;text=@Model.Title" target="_blank"><i class="fa fa-twitter fa-inverse"></i></a></li>
+                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=@url" target="_blank"><i class="fa fa-facebook fa-inverse"></i></a></li>
+                    <li><a href="https://reddit.com/submit?url=@url&amp;title=@Model.Title" target="_blank"><i class="fa fa-reddit fa-inverse"></i></a></li>
+                    <li><a href="https://plus.google.com/share?url=@url" target="_blank"><i class="fa fa-google-plus fa-inverse"></i></a></li>
+                    <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=@url" target="_blank"><i class="fa fa-linkedin fa-inverse"></i></a></li>
+                    <li id="whatsapp"><a href="whatsapp://send?text=@Model.Title&amp;@url" target="_blank"><i class="fa fa-whatsapp fa-inverse"></i></a></li>
+                    <li><a href="mailto:?subject=@Model.Title&amp;body= @url" target="_blank"><i class="fa fa-envelope-o fa-inverse"></i></a></li>
+                </ul>
+                <h1>@Model.Title</h1>
+                <span class="published-date">@Model.Published.ToString("MMMM dd yyyy")</span>
+                <div class="tags">
+                    <i class="fa fa-tags"></i>
+                    @if (Model.Tags != null && Model.Tags.Count() > 0)
+                    {
+
+                        @foreach (var tag in Model.Tags)
+                        {
+                            <a href="#">@tag</a>
+                        }
+                    }
+
+                    
+                </div>
+            </header>
+
+            <main>
+                @Html.Raw(@Model.Content.Value)
+            </main>
+        </article>
+    </div>
+</div>

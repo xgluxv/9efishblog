@@ -1,0 +1,13 @@
+[
+  {
+    "slug": "example-post",
+    "title": "example post",
+    "published": "2017-03-09T00:00:00",
+    "tags": [
+      "blog",
+      "fun",
+      "example"
+    ],
+    "featuredImage": "/posts/example-post/pic0.png"
+  }
+]

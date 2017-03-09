@@ -1,0 +1,31 @@
+﻿@model List<MyBlog.Post>
+@{
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            @foreach (var item in Model)
+            {
+                <div class="post-preview">
+                    <a href="@Url.RouteUrl("Post",new { slug = item.Slug})">
+                        <h2 class="post-title">
+                            @item.Title
+                        </h2>
+
+                    </a>
+                    <p class="post-meta">Posted on @item.Published.ToString("MMMM dd yyyy")</p>
+                </div>
+                @*<div class="tags">
+                        <i class="fa fa-tags"></i>
+                        <a href="/tags/Blogging">Blogging</a>
+                        <a href="/tags/ASP.NET">ASP.NET</a>
+                        <a href="/tags/DotNetCore">DotNetCore</a>
+                        <a href="/tags/Linux">Linux</a>
+                        <a href="/tags/Orchard">Orchard</a>
+                        <a href="/tags/Markdown">Markdown</a>
+                    </div>*@
+                <hr>
+            }
+        </div>
+    </div>
+</div>
