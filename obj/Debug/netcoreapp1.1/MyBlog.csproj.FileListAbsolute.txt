@@ -1,9 +1,0 @@
-d:\code\Blog\MyBlog\bin\Debug\netcoreapp1.1\MyBlog.deps.json
-d:\code\Blog\MyBlog\bin\Debug\netcoreapp1.1\MyBlog.runtimeconfig.json
-d:\code\Blog\MyBlog\bin\Debug\netcoreapp1.1\MyBlog.runtimeconfig.dev.json
-d:\code\Blog\MyBlog\bin\Debug\netcoreapp1.1\MyBlog.dll
-d:\code\Blog\MyBlog\bin\Debug\netcoreapp1.1\MyBlog.pdb
-d:\code\Blog\MyBlog\obj\Debug\netcoreapp1.1\MyBlog.AssemblyInfo.cs
-d:\code\Blog\MyBlog\obj\Debug\netcoreapp1.1\MyBlog.dll
-d:\code\Blog\MyBlog\obj\Debug\netcoreapp1.1\MyBlog.pdb
-D:\code\Blog\MyBlog\obj\Debug\netcoreapp1.1\MyBlog.csprojResolveAssemblyReference.cache
